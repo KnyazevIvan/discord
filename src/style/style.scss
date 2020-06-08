@@ -1,0 +1,73 @@
+@import "login";
+@import "rooms";
+@import "modal";
+@import "loader";
+@import "chat";
+@import "mixins";
+body {
+  margin: 0;
+  padding: 0;
+  background: #26262b;
+  color: white;
+  box-sizing: border-box;
+  @font-face {
+    font-family: 'Helvetica';
+    src: url("../font/HelveticaNeueCyr-Medium.otf");
+  }
+  font-family: Helvetica, sans-serif;
+}
+.App {
+  display: flex;
+}
+form {
+  width: 400px;
+  box-shadow: none;
+  color: #7289da;
+  height: 45px;
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  @include mobile {
+    width: 85vw;
+  }
+}
+input {
+  border-radius: 3px;
+  font-weight: 400;
+  padding: 0 24px;
+  font-size: 14px;
+  outline: none;
+  flex-grow: 1;
+  border: 0;
+  display: flex;
+  align-items: center;
+}
+button {
+  border-radius: 3px;
+  right: 0;
+  font-weight: 500;
+  overflow: hidden;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  margin: auto;
+  border: 0;
+  padding: 0;
+  margin: 4px;
+  position: absolute;
+  background-color: #7289da;
+  height: 38px;
+  width: 55px;
+}
+.arrow {
+  margin: 0 auto;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: url('../svg/arrow.svg') 0% no-repeat;
+}
